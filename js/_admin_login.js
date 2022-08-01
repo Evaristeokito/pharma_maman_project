@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    $(".loading-spinner").hide();
+
     $('#admin_login_form').on('submit', function(event) {
         event.preventDefault();
         $.ajax({
@@ -9,6 +11,7 @@ $(document).ready(function() {
             dataType: "json",
             beforeSend: function() {
                 $('#admin_login').val('validation...');
+                $(".loading-spinner").show();
                 $('#admin_login').attr('disabled', 'disabled');
             },
             success: function(data) {
@@ -17,18 +20,21 @@ $(document).ready(function() {
                 }
                 if (data.error) {
                     $('#admin_login').val('connexion');
+                    setTimeout(() => {
+                        $(".loading-spinner").hide()
+                    }, 4000);
                     $('#admin_login').attr('disabled', false);
 
                     iziToast.show({
-                        title: "Notification",
+                        title: "Erreur :",
                         titleColor: "white",
-                        message: "Le nom administrateur ou mot de passe invalid",
+                        message: "Le nom administrateur ou Mot de passe incorrect",
                         messageColor: "white",
-                        backgroundColor: "#009688",
+                        backgroundColor: "#ba000d",
                         timeout: 4000,
                         position: "topRight",
                         progressBar: true,
-                        progressBarColor: "#4db6ac",
+                        progressBarColor: "#f44336",
                     });
                 }
             }
