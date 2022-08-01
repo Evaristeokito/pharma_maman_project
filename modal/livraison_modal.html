@@ -1,0 +1,31 @@
+<!-- delete Modal -->
+<div id="deleteLivraison" className="iziModal" data-izimodal-group="alerts" data-izimodal-group="alerts">
+    <!-- Modal body -->
+    <div class="modal-body">
+        <h6 align="center">voulez-vous supprimer cette famille du produit ?</h6>
+    </div>
+
+    <!-- Modal footer -->
+    <div class="modal-footer">
+        <button type="reset" name="annuler" id="annuler" class="btn btn-primary btn-sm">Annuler</button>
+        <button type="button" name="ok_button" id="ok_button" class="btn btn-danger btn-sm">
+   valider
+   <i class="fa-thin fa-pen-to-square"></i>
+  </button>
+    </div>
+</div>
+<!-- end delete Modal -->
+
+<script>
+    $('#deleteLivraison').iziModal({
+        title: 'SUPPRIMER LA LIVRAISON',
+        headerColor: '#ba000d',
+        loop: false,
+        width: 500,
+        closeOnEscape: false,
+        navigateArrows: false,
+        zindex: 2000,
+        overlay: false,
+        closeButton: true,
+    });
+</script>

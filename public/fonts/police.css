@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Lato;
+    src: url('./Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('./Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: SansPro;
+    src: url('./Sans_Pro/SansPro.ttf');
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('./Roboto/Roboto-Regular.ttf');
+}

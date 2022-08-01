@@ -1,0 +1,136 @@
+<!-- client -->
+<div id="clientModal" className="iziModal" data-izimodal-group="alerts" data-izimodal-group="alerts">
+    <div class="container-fluid">
+        <form role="form" method="post" id="formClient" novalidate autocomplete="off">
+
+            <div class="modal-body">
+                <div class="row">
+
+                    <!-- col-6 left  -->
+                    <div class="col-md-12">
+                        <div class="card">
+
+                            <!-- form start -->
+                            <div class="card-body">
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <!-- /nom -->
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label>Nom <span class="text text-red">*</span> :</label>
+                                                <input type="text" class="form-control" placeholder="nom..." id="client_nom" name="client_nom" />
+                                                <span id="error_client_nom" class="text text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <!-- ./End nom-->
+                                    </div>
+                                    <div class="col-6">
+                                        <!-- /type client -->
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label>Type client : </label>
+                                                <input type="text" class="form-control" placeholder="type client..." id="client_type" name="client_type" />
+                                                <span id="error_client_nom" class="text text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <!-- ./end type client -->
+                                    </div>
+                                </div>
+                                <!-- /email client -->
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Email client : </label>
+                                        <input type="text" class="form-control" placeholder="email client..." id="client_email" name="client_email" />
+                                    </div>
+                                </div>
+                                <!-- ./end email client -->
+
+                                <!-- telephone client -->
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Telephone client : </label>
+                                        <input type="text" class="form-control" placeholder="type client..." id="client_telephone" name="client_telephone" />
+                                    </div>
+                                </div>
+                                <!-- ./end telephone client -->
+
+                                <!-- adresse client -->
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>Adresse client : </label>
+                                        <input type="text" class="form-control" placeholder="type client..." id="client_adresse" name="client_adresse" />
+                                    </div>
+                                </div>
+                                <!-- ./end adresse client -->
+
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                    <!--/.col-6 -->
+                </div>
+                <!-- ./row -->
+            </div>
+
+            <!--modal footer-->
+            <div class="modal-footer">
+                <div class="float-right">
+                    <input type="hidden" name="client_id" id="client_id" />
+                    <input type="hidden" name="action" id="action" value="Add" />
+                    <input type="submit" name="button_add" id="button_add" class="btn btn-primary btn-sm" value="Add" />
+                </div>
+            </div>
+            <!-- end modal footer-->
+
+        </form>
+        <!-- ./form -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- end client -->
+
+<!-- delete Modal -->
+<div id="deleteFamille" className="iziModal" data-izimodal-group="alerts" data-izimodal-group="alerts">
+    <!-- Modal body -->
+    <div class="modal-body">
+        <h6 align="center">voulez-vous supprimer cette famille du produit ?</h6>
+    </div>
+
+    <!-- Modal footer -->
+    <div class="modal-footer">
+        <button type="reset" name="annuler" id="annuler" class="btn btn-primary btn-sm">Annuler</button>
+        <button type="button" name="ok_button" id="ok_button" class="btn btn-danger btn-sm">
+   valider
+   <i class="fa-thin fa-pen-to-square"></i>
+  </button>
+    </div>
+</div>
+<!-- end delete Modal -->
+
+<script>
+    $('#clientModal').iziModal({
+        title: 'CLIENT AU GUICHET',
+        headerColor: '#1e88e5',
+        loop: false,
+        padding: 10,
+        iframe: false,
+        width: 580,
+        overlay: false,
+        closeOnEscape: false,
+        navigateArrows: false,
+        zindex: 2000,
+    });
+
+    $('#deleteFamille').iziModal({
+        title: 'SUPPRESSION DE FAMILLE',
+        headerColor: '#ba000d',
+        loop: false,
+        width: 500,
+        closeOnEscape: false,
+        navigateArrows: false,
+        zindex: 2000,
+        overlay: false,
+        closeButton: true,
+    });
+</script>

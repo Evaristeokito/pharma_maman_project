@@ -1,0 +1,66 @@
+<!--  FORM forme-->
+<div class="col-6 mt-4">
+    <div class="card card-info">
+        <div class="card-header">
+            <h3 class="card-title">INFORMATION</h3>
+        </div>
+        <div class="card-body">
+            <form method="post" id="form_format" name="form_format">
+                <!--  Format-->
+                <div class="form-group">
+                    <label for="#">Format<span class="text-danger">*</span> :</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="format" name="format" placeholder="format..." />
+                    </div>
+                </div>
+
+                <!-- description-->
+                <div class="form-group">
+                    <label for="#">Description :</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="description" name="description" placeholder="description..." />
+                    </div>
+                </div>
+
+                <div class="form-group mb-3 mt-3">
+                    <div class="float-right">
+                        <button type="reset" id="reset" name="reset" class="btn btn-danger btn-sm">
+                           Annuler
+                        </button>
+                        <input type="hidden" id="action" name="action" value="add" />
+                        <button type="submit" id="add_button" name="add_button" class="btn btn-primary btn-sm">
+                          Enregistrer
+                       </button>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </form>
+        </div>
+        <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+</div>
+<!--/.col (right) -->
+
+<!-- forme liste-->
+<div class="col-6 mt-4">
+    <table class="table table-bordered table-hover" id="table_format">
+        <thead>
+            <tr>
+                <th>Format</th>
+                <th>Description</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>

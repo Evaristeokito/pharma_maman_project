@@ -1,0 +1,123 @@
+<!-- update qte produit -->
+<div id="stockModal" className="iziModal" data-izimodal-group="alerts" data-izimodal-group="alerts">
+    <section class="content">
+        <div class="container-fluid">
+            <!--form-->
+            <form role="form" method="post" autocomplete="off" id="formstock">
+                <div class="row">
+                    <!-- left column -->
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+                        <div class="card card-info">
+                            <div class="card-body">
+
+                                <!-- desigination-->
+                                <div class="form-group mb-3">
+                                    <label for="#">Designation <span class="text-danger">*</span> :</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="produit" name="produit" placeholder="medicament..." disabled>
+                                    </div>
+                                </div>
+                                <!-- end disignation -->
+
+                                <!-- row -->
+                                <div class="row">
+                                    <!-- stock Max -->
+                                    <div class="col-6">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="#">Stock Max <span class="text-danger">*</span> :</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="number" class="form-control" id="stock_max" name="stock_max" placeholder="0.00" disabled>
+                                                </div>
+                                                <span class="text-danger" id="error_stock_max"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end stock Max -->
+
+                                    <!-- Alert -->
+                                    <div class="col-6">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="#">Stock Limite <span class="text-danger">*</span> :</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="Number" class="form-control" id="alert" name="alert" placeholder="0.00" disabled>
+                                                </div>
+                                                <span class="text-danger" id="error_alert"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end Alert -->
+                                </div>
+                                <!-- end row -->
+
+                                <!-- row -->
+                                <div class="row">
+                                    <!-- stock -->
+                                    <div class="col-6">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="#">Stock courante <span class="text-danger">*</span> :</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="number" class="form-control" id="stock" name="stock" placeholder="0.00">
+                                                </div>
+                                                <span class="text-danger" id="error_stock"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end stock -->
+
+                                    <!-- unite -->
+                                    <div class="col-6">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label for="#">Unite <span class="text-danger">*</span> :</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" id="unite" name="unite" placeholder="unite..." disabled>
+                                                </div>
+                                                <span class="text-danger" id="error_unit"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- end unite -->
+                                </div>
+                                <!-- end row -->
+
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                    </div>
+                    <!--/.col (left) -->
+                    <div class="col-lg-12">
+                        <div class="form-group mb-3 mt-5">
+                            <div class="float-right">
+                                <input type="hidden" name="produit_id" id="produit_id">
+                                <input type="hidden" id="action" name="action" value="Edit">
+                                <input type="submit" id="button_edit" name="button_edit" class="btn btn-primary btn-sm" value="valider">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+            </form>
+            <!-- /. form-->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+</div>
+<!-- end update qte produit -->
+
+
+<script>
+    $('#stockModal').iziModal({
+        title: 'REAPROVISIONNER LE STOCK',
+        headerColor: '#1e88e5',
+        loop: false,
+        padding: 10,
+        iframe: false,
+        width: 600,
+        overlay: false,
+        zindex: 2000,
+    });
+</script>
